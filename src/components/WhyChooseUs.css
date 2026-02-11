@@ -1,0 +1,80 @@
+/* ===== Why Choose Us ===== */
+.whyus {
+    position: relative;
+    background: linear-gradient(135deg, #0f2640, #1B3A5C, #2a5580);
+    overflow: hidden;
+}
+
+.whyus__bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(rgba(232, 168, 23, 0.08) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+.whyus__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.whyus__card {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-lg);
+    padding: 36px 28px;
+    text-align: center;
+    transition: var(--transition-base);
+}
+
+.whyus__card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(232, 168, 23, 0.3);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+}
+
+.whyus__card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--radius-full);
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--primary-dark);
+    transition: var(--transition-base);
+}
+
+.whyus__card:hover .whyus__card-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.whyus__card-title {
+    font-size: 1.15rem;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.whyus__card-desc {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .whyus__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .whyus__grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,123 @@
+/* ===== Services ===== */
+.services {
+    background: var(--light-gray);
+}
+
+.services__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.services__card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 40px 32px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-base);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.services__card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--card-color, var(--accent)), transparent);
+    opacity: 0;
+    transition: var(--transition-base);
+}
+
+.services__card:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+.services__card:hover::before {
+    opacity: 1;
+}
+
+.services__card-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    background: color-mix(in srgb, var(--card-color, var(--accent)) 10%, transparent);
+    color: var(--card-color, var(--accent));
+    transition: var(--transition-base);
+}
+
+.services__card:hover .services__card-icon {
+    background: var(--card-color, var(--accent));
+    color: var(--white);
+    transform: scale(1.05);
+}
+
+.services__card-title {
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+}
+
+.services__card-desc {
+    color: var(--muted-text);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.services__card-features {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.services__card-features li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--body-text);
+}
+
+.services__feature-icon {
+    color: var(--accent);
+    flex-shrink: 0;
+    font-size: 0.85rem;
+}
+
+.services__card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-top: auto;
+    transition: var(--transition-base);
+}
+
+.services__card-link:hover {
+    color: var(--accent);
+    gap: 10px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .services__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .services__grid {
+        grid-template-columns: 1fr;
+    }
+}
