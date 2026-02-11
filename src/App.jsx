@@ -2,6 +2,7 @@ import { HelmetProvider, Helmet } from 'react-helmet-async';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
+import Founders from './components/Founders';
 import Services from './components/Services';
 import WhyChooseUs from './components/WhyChooseUs';
 import Gallery from './components/Gallery';
@@ -87,6 +88,7 @@ export default function App() {
       <main>
         <Hero />
         <About />
+        <Founders />
         <Services />
         <WhyChooseUs />
         <Gallery />

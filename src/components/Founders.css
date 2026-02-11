@@ -1,0 +1,118 @@
+/* ===== Founders ===== */
+.founders {
+    background: var(--light-gray);
+    padding-bottom: 80px;
+}
+
+.founders__grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.founder-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    flex: 1 1 350px;
+    max-width: 450px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.founder-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.founder-card__image-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+}
+
+.founder-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.founder-card:hover .founder-card__image {
+    transform: scale(1.05);
+}
+
+.founder-card__social {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.founder-card:hover .founder-card__social {
+    opacity: 1;
+}
+
+.founder-card__social a {
+    color: var(--white);
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.founder-card__social a:hover {
+    color: var(--accent);
+    transform: scale(1.1);
+}
+
+.founder-card__content {
+    padding: 24px;
+    text-align: center;
+}
+
+.founder-card__name {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 4px;
+    color: var(--primary);
+}
+
+.founder-card__role {
+    font-size: 0.9rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.founder-card__bio {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--body-text);
+    margin-bottom: 0;
+}
+
+/* Response */
+@media (max-width: 768px) {
+    .founders__grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .founder-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .founder-card__image-wrapper {
+        height: 250px;
+    }
+}
