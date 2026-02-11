@@ -8,6 +8,7 @@ import {
     LuInstagram,
     LuTwitter,
 } from 'react-icons/lu';
+import logo from '../assets/logo.png';
 import './Footer.css';
 
 const quickLinks = [
@@ -44,13 +45,7 @@ export default function Footer() {
                     {/* Company Info */}
                     <div className="footer__col footer__company">
                         <div className="footer__logo">
-                            <div className="footer__logo-icon">
-                                <span>NL</span>
-                            </div>
-                            <div className="footer__logo-text">
-                                <span className="footer__logo-name">New Lucky</span>
-                                <span className="footer__logo-tagline">Furniture Industries</span>
-                            </div>
+                            <img src={logo} alt="New Lucky Furniture Industries" className="footer__logo-img" />
                         </div>
                         <p className="footer__about">
                             Crafting premium furniture since 1995. We transform spaces with

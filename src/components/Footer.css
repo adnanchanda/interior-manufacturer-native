@@ -18,43 +18,17 @@
 .footer__logo {
     display: flex;
     align-items: center;
-    gap: 12px;
     margin-bottom: 20px;
 }
 
-.footer__logo-icon {
-    width: 45px;
-    height: 45px;
-    background: linear-gradient(135deg, var(--accent), var(--accent-light));
-    border-radius: var(--radius-sm);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--primary-dark);
-    font-family: var(--font-heading);
-    font-weight: 800;
-    font-size: 1.1rem;
+.footer__logo-img {
+    height: 50px;
+    width: auto;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.footer__logo-text {
-    display: flex;
-    flex-direction: column;
-}
 
-.footer__logo-name {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 1.15rem;
-    color: var(--white);
-    line-height: 1.1;
-}
-
-.footer__logo-tagline {
-    font-size: 0.65rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: rgba(255, 255, 255, 0.5);
-}
 
 .footer__about {
     font-size: 0.9rem;

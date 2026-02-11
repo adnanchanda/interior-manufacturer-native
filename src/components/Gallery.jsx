@@ -3,7 +3,7 @@ import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { LuX, LuChevronLeft, LuChevronRight } from 'react-icons/lu';
 import './Gallery.css';
 
-const categories = ['All', 'Living Room', 'Bedroom', 'Office', 'Dining'];
+const categories = ['All', 'Living Room', 'Bedroom', 'Dining', 'Office', 'School', 'Hotel'];
 
 const galleryItems = [
     { id: 1, category: 'Living Room', title: 'Modern L-Shaped Sofa', color: '#8B4513' },

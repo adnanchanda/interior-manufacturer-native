@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HiMenu, HiX } from 'react-icons/hi';
+import logo from '../assets/logo.png';
 import './Header.css';
 
 const navLinks = [
@@ -58,13 +59,7 @@ export default function Header() {
     >
       <div className="header__container container">
         <a href="#home" className="header__logo" onClick={(e) => handleNavClick(e, '#home')}>
-          <div className="header__logo-icon">
-            <span>NL</span>
-          </div>
-          <div className="header__logo-text">
-            <span className="header__logo-name">New Lucky</span>
-            <span className="header__logo-tagline">Furniture Industries</span>
-          </div>
+          <img src={logo} alt="New Lucky Furniture Industries" className="header__logo-img" />
         </a>
 
         <nav className="header__nav">
@@ -123,15 +118,9 @@ export default function Header() {
               transition={{ type: 'spring', stiffness: 300, damping: 30 }}
             >
               <div className="header__drawer-header">
-                <div className="header__logo">
-                  <div className="header__logo-icon">
-                    <span>NL</span>
-                  </div>
-                  <div className="header__logo-text">
-                    <span className="header__logo-name">New Lucky</span>
-                    <span className="header__logo-tagline">Furniture Industries</span>
-                  </div>
-                </div>
+                <a href="#home" className="header__logo" onClick={(e) => handleNavClick(e, '#home')}>
+                  <img src={logo} alt="New Lucky Furniture" className="header__logo-img" />
+                </a>
                 <button
                   className="header__drawer-close"
                   onClick={() => setMobileOpen(false)}
