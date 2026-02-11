@@ -5,7 +5,7 @@ import './Founders.css';
 
 const founders = [
     {
-        name: 'Mohammed Chanda',
+        name: 'Khalid Shaikh',
         role: 'Founder & CEO',
         bio: 'With over 30 years of experience in furniture craftsmanship, Mohammed founded New Lucky Furniture Industries with a vision to bring quality and durability to every home. His deep knowledge of materials and traditional techniques forms the backbone of our company.',
         image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400&h=400',
@@ -16,7 +16,7 @@ const founders = [
         },
     },
     {
-        name: 'Adnan Chanda',
+        name: 'Usama Shaikh',
         role: 'Managing Director',
         bio: 'Bringing modern design sensibilities and operational excellence, Adnan leads the company’s expansion and innovation. He ensures that New Lucky stays ahead of trends while maintaining the core values of integrity and customer satisfaction.',
         image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400&h=400',
@@ -24,6 +24,17 @@ const founders = [
             linkedin: '#',
             twitter: '#',
             email: 'mailto:adnan@newluckyfurniture.com',
+        },
+    },
+    {
+        name: 'Junaid Shaikh',
+        role: 'Founder & CEO',
+        bio: 'With over 30 years of experience in furniture craftsmanship, Mohammed founded New Lucky Furniture Industries with a vision to bring quality and durability to every home. His deep knowledge of materials and traditional techniques forms the backbone of our company.',
+        image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400&h=400',
+        social: {
+            linkedin: '#',
+            twitter: '#',
+            email: 'mailto:founder@newluckyfurniture.com',
         },
     },
 ];
