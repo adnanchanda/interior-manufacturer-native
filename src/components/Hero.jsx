@@ -109,16 +109,6 @@ export default function Hero() {
                 </motion.div>
             </div>
 
-            <motion.div
-                className="hero__scroll-indicator"
-                animate={{ y: [0, 8, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-            >
-                <div className="hero__scroll-mouse">
-                    <div className="hero__scroll-wheel" />
-                </div>
-                <span>Scroll Down</span>
-            </motion.div>
         </section>
     );
 }

@@ -126,16 +126,6 @@ export default function Footer() {
                 </div>
             </div>
 
-            {/* Scroll to top */}
-            <motion.button
-                className="footer__scroll-top"
-                onClick={scrollToTop}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                aria-label="Scroll to top"
-            >
-                <LuArrowUp size={20} />
-            </motion.button>
         </footer>
     );
 }
