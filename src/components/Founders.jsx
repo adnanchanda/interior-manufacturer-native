@@ -1,6 +1,5 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { LuLinkedin, LuTwitter, LuMail } from 'react-icons/lu';
 import './Founders.css';
 
 const founders = [
@@ -8,34 +7,16 @@ const founders = [
         name: 'Khalid Shaikh',
         role: 'Founder & CEO',
         bio: 'With over 30 years of experience in furniture craftsmanship, Mohammed founded New Lucky Furniture Industries with a vision to bring quality and durability to every home. His deep knowledge of materials and traditional techniques forms the backbone of our company.',
-        image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400&h=400',
-        social: {
-            linkedin: '#',
-            twitter: '#',
-            email: 'mailto:founder@newluckyfurniture.com',
-        },
     },
     {
         name: 'Usama Shaikh',
         role: 'Managing Director',
-        bio: 'Bringing modern design sensibilities and operational excellence, Adnan leads the company’s expansion and innovation. He ensures that New Lucky stays ahead of trends while maintaining the core values of integrity and customer satisfaction.',
-        image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400&h=400',
-        social: {
-            linkedin: '#',
-            twitter: '#',
-            email: 'mailto:adnan@newluckyfurniture.com',
-        },
+        bio: 'Bringing modern design sensibilities and operational excellence, Adnan leads the company\u2019s expansion and innovation. He ensures that New Lucky stays ahead of trends while maintaining the core values of integrity and customer satisfaction.',
     },
     {
         name: 'Junaid Shaikh',
-        role: 'Founder & CEO',
-        bio: 'With over 30 years of experience in furniture craftsmanship, Mohammed founded New Lucky Furniture Industries with a vision to bring quality and durability to every home. His deep knowledge of materials and traditional techniques forms the backbone of our company.',
-        image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400&h=400',
-        social: {
-            linkedin: '#',
-            twitter: '#',
-            email: 'mailto:founder@newluckyfurniture.com',
-        },
+        role: 'Managing Director',
+        bio: 'Junaid represents the new generation of leadership at New Lucky Furniture Industries. With fresh ideas, a passion for modern design, and a keen eye for emerging trends, he is driving the company into the future — blending innovation with the timeless craftsmanship that defines NLFI.',
     },
 ];
 
@@ -68,24 +49,6 @@ export default function Founders() {
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
                             transition={{ duration: 0.6, delay: 0.2 + i * 0.2 }}
                         >
-                            <div className="founder-card__image-wrapper">
-                                <img
-                                    src={founder.image}
-                                    alt={founder.name}
-                                    className="founder-card__image"
-                                />
-                                <div className="founder-card__social">
-                                    <a href={founder.social.linkedin} aria-label="LinkedIn">
-                                        <LuLinkedin size={20} />
-                                    </a>
-                                    <a href={founder.social.twitter} aria-label="Twitter">
-                                        <LuTwitter size={20} />
-                                    </a>
-                                    <a href={founder.social.email} aria-label="Email">
-                                        <LuMail size={20} />
-                                    </a>
-                                </div>
-                            </div>
                             <div className="founder-card__content">
                                 <h3 className="founder-card__name">{founder.name}</h3>
                                 <span className="founder-card__role">{founder.role}</span>

@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { LuAward, LuUsers, LuHouse, LuCalendar } from 'react-icons/lu';
+import factoryExterior from '../assets/1CDFBCB6-9920-4079-95F0-10738991D3A4.PNG';
 import './About.css';
 
 const stats = [
@@ -40,10 +41,11 @@ export default function About() {
                     >
                         <div className="about__story-image">
                             <div className="about__story-image-inner">
-                                <div className="about__image-placeholder">
-                                    <LuHouse size={60} />
-                                    <span>Since 1995</span>
-                                </div>
+                                <img
+                                    src={factoryExterior}
+                                    alt="New Lucky Furniture Industries Factory"
+                                    className="about__story-photo"
+                                />
                             </div>
                             <div className="about__story-badge">
                                 <span className="about__story-badge-number">30+</span>

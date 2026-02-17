@@ -5,6 +5,7 @@ import About from './components/About';
 import Founders from './components/Founders';
 import Services from './components/Services';
 import WhyChooseUs from './components/WhyChooseUs';
+import Factory from './components/Factory';
 import Gallery from './components/Gallery';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
@@ -91,6 +92,7 @@ export default function App() {
         <Founders />
         <Services />
         <WhyChooseUs />
+        <Factory />
         <Gallery />
         <Testimonials />
         <Contact />
