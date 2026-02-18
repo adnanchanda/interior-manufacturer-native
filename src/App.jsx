@@ -68,7 +68,7 @@ export default function App() {
         <meta property="og:title" content="New Lucky Furniture Industries | Premium Furniture Since 1995" />
         <meta
           property="og:description"
-          content="Transform your space with bespoke furniture from Solapur's most trusted manufacturer. 30+ years of excellence."
+          content="Transform your space with bespoke furniture from Solapur's most trusted manufacturer. 25+ years of excellence."
         />
         <meta property="og:url" content="https://newluckyfurniture.com" />
         <meta property="og:site_name" content="New Lucky Furniture Industries" />

@@ -93,7 +93,7 @@ export default function Hero() {
                     transition={{ duration: 0.8, delay: 1 }}
                 >
                     <div className="hero__stat">
-                        <span className="hero__stat-number">30+</span>
+                        <span className="hero__stat-number">25+</span>
                         <span className="hero__stat-label">Years Experience</span>
                     </div>
                     <div className="hero__stat-divider" />

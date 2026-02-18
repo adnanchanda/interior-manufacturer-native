@@ -23,7 +23,7 @@ const features = [
     },
     {
         icon: LuClock,
-        title: '30+ Years Experience',
+        title: '25+ Years Experience',
         description: 'Three decades of industry expertise means we understand what works, delivering time-tested quality every time.',
     },
     {

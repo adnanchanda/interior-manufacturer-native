@@ -39,8 +39,8 @@ const contactInfo = [
         icon: LuClock,
         title: 'Working Hours',
         details: [
-            { label: 'Mon-Sat', value: '9:00 AM - 7:00 PM' },
-            { label: 'Sunday', value: 'By Appointment' },
+            { label: 'Sat-Thu', value: '10:00 AM - 8:00 PM' },
+            { label: 'Friday', value: 'Closed' },
         ],
     },
 ];

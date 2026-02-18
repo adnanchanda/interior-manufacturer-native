@@ -7,7 +7,7 @@ import factoryExteriorPh from '../assets/placeholders/1CDFBCB6-9920-4079-95F0-10
 import './About.css';
 
 const stats = [
-    { icon: LuCalendar, number: '30+', label: 'Years of Excellence', suffix: '' },
+    { icon: LuCalendar, number: '25+', label: 'Years of Excellence', suffix: '' },
     { icon: LuHouse, number: '1000+', label: 'Projects Completed', suffix: '' },
     { icon: LuUsers, number: '500+', label: 'Happy Families', suffix: '' },
     { icon: LuAward, number: '100%', label: 'Quality Guaranteed', suffix: '' },
@@ -51,7 +51,7 @@ export default function About() {
                                 />
                             </div>
                             <div className="about__story-badge">
-                                <span className="about__story-badge-number">30+</span>
+                                <span className="about__story-badge-number">25+</span>
                                 <span className="about__story-badge-text">Years</span>
                             </div>
                         </div>
@@ -68,7 +68,7 @@ export default function About() {
                             <span className="about__content-accent">One Piece at a Time</span>
                         </h3>
                         <p>
-                            <strong>New Lucky Furniture Industries</strong> was established in 1995 in Solapur,
+                            <strong>New Lucky Furniture Industries</strong> was established in 2001 in Solapur,
                             Maharashtra, with a simple vision — to bring world-class furniture craftsmanship
                             to every home and office. What started as a small workshop has grown into one of
                             the most trusted names in the region.
