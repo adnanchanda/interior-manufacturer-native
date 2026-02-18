@@ -48,8 +48,8 @@ const factoryImages = [
     {
         src: holzmaMachine,
         placeholder: holzmaMachinePh,
-        title: 'CNC Panel Saw',
-        description: 'Holzma CNC panel saw for precision board cutting',
+        title: 'Automatic Beam Saw',
+        description: 'Homag Automatic Beam saw for precision board cutting',
     },
     {
         src: workshopFloor,
