@@ -84,8 +84,8 @@ const factoryImages = [
     {
         src: coldPress,
         placeholder: coldPressPh,
-        title: '50-Ton Cold Press',
-        description: 'Heavy-duty cold press for laminate and veneer bonding',
+        title: 'Manual Edge Banding',
+        description: 'Manual edge banding station for custom finishes and small batch work',
     },
     {
         src: edgeBanding,
@@ -102,8 +102,8 @@ const factoryImages = [
     {
         src: craftsmanship2,
         placeholder: craftsmanship2Ph,
-        title: 'Artisan at Work',
-        description: 'Meticulous attention to detail in every piece we craft',
+        title: '50 ton cold press',
+        description: '50 ton cold press for laminating and veneering, ensuring strong bonds and flawless finishes',
     },
 ];
 
