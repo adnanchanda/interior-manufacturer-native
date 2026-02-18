@@ -79,7 +79,7 @@ export default function Hero() {
                         Get Free Consultation <HiArrowRight />
                     </a>
                     <a
-                        href="tel:+919876543210"
+                        href="tel:+918482993385"
                         className="btn btn-secondary hero__btn"
                     >
                         <HiPhone /> Call Us Now
