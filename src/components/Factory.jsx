@@ -12,6 +12,11 @@ import drillingMachine from '../assets/optimized/6023430E-330D-4460-BE22-6490CBD
 import productionArea from '../assets/optimized/IMG_2236.JPG.webp';
 import aerialView from '../assets/optimized/IMG_2992.jpg.webp';
 import holzmaMachine from '../assets/optimized/18ED5C3F-CC10-49B6-B53B-1F0D2324E558.webp';
+import multiBoring from '../assets/optimized/3_head_multi_boring.webp';
+import coldPress from '../assets/optimized/fifty_ton_cold_press.webp';
+import edgeBanding from '../assets/optimized/homag_automatic_edge.webp';
+import craftsmanship1 from '../assets/optimized/precised_craftsmanship.webp';
+import craftsmanship2 from '../assets/optimized/precised_craftsmanship2.webp';
 
 // Blur placeholders
 import factoryExteriorPh from '../assets/placeholders/1CDFBCB6-9920-4079-95F0-10738991D3A4_placeholder.webp';
@@ -21,6 +26,11 @@ import drillingMachinePh from '../assets/placeholders/6023430E-330D-4460-BE22-64
 import productionAreaPh from '../assets/placeholders/IMG_2236.JPG_placeholder.webp';
 import aerialViewPh from '../assets/placeholders/IMG_2992.jpg_placeholder.webp';
 import holzmaMachinePh from '../assets/placeholders/18ED5C3F-CC10-49B6-B53B-1F0D2324E558_placeholder.webp';
+import multiBoringPh from '../assets/placeholders/3_head_multi_boring_placeholder.webp';
+import coldPressPh from '../assets/placeholders/fifty_ton_cold_press_placeholder.webp';
+import edgeBandingPh from '../assets/placeholders/homag_automatic_edge_placeholder.webp';
+import craftsmanship1Ph from '../assets/placeholders/precised_craftsmanship_placeholder.webp';
+import craftsmanship2Ph from '../assets/placeholders/precised_craftsmanship2_placeholder.webp';
 
 const factoryImages = [
     {
@@ -32,8 +42,8 @@ const factoryImages = [
     {
         src: craftsmen,
         placeholder: craftsmenPh,
-        title: 'Expert Craftsmen',
-        description: 'Skilled artisans working with precision cutting equipment',
+        title: 'Modern Machinery',
+        description: 'SCM-Panel Saw for precision board cutting and efficient production',
     },
     {
         src: holzmaMachine,
@@ -64,6 +74,36 @@ const factoryImages = [
         placeholder: aerialViewPh,
         title: 'Factory Overview',
         description: 'Aerial view of our facility with dust collection system',
+    },
+    {
+        src: multiBoring,
+        placeholder: multiBoringPh,
+        title: '3-Head Multi Boring',
+        description: 'Multi-spindle boring machine for precise dowel hole drilling',
+    },
+    {
+        src: coldPress,
+        placeholder: coldPressPh,
+        title: '50-Ton Cold Press',
+        description: 'Heavy-duty cold press for laminate and veneer bonding',
+    },
+    {
+        src: edgeBanding,
+        placeholder: edgeBandingPh,
+        title: 'Homag Edge Banding',
+        description: 'Automatic Homag edge banding machine for seamless finishes',
+    },
+    {
+        src: craftsmanship1,
+        placeholder: craftsmanship1Ph,
+        title: 'Precise Craftsmanship',
+        description: 'Skilled hands ensuring every detail meets our quality standards',
+    },
+    {
+        src: craftsmanship2,
+        placeholder: craftsmanship2Ph,
+        title: 'Artisan at Work',
+        description: 'Meticulous attention to detail in every piece we craft',
     },
 ];
 
@@ -172,7 +212,7 @@ export default function Factory() {
                         ))}
                     </div>
 
-                    {/* Row 2: 2 images side-by-side + 1 tall-ish */}
+                    {/* Row 2: 1 large + 2 stacked */}
                     <div className="factory__row factory__row--featured">
                         <motion.div
                             className="factory__card factory__card--large"
@@ -190,7 +230,7 @@ export default function Factory() {
                         </motion.div>
 
                         <div className="factory__card-stack">
-                            {rest.slice(4).map((item, i) => (
+                            {rest.slice(4, 6).map((item, i) => (
                                 <motion.div
                                     key={item.title}
                                     className="factory__card"
@@ -198,6 +238,50 @@ export default function Factory() {
                                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                                     transition={{ duration: 0.5, delay: 0.65 + i * 0.1 }}
                                     onClick={() => openLightbox(i + 5)}
+                                >
+                                    <OptimizedImage src={item.src} placeholder={item.placeholder} alt={item.title} className="factory__card-img-wrapper" />
+                                    <div className="factory__card-overlay">
+                                        <div className="factory__card-zoom"><LuZoomIn size={18} /></div>
+                                        <h4 className="factory__card-title">{item.title}</h4>
+                                        <p className="factory__card-desc">{item.description}</p>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Row 3: 3 images */}
+                    <div className="factory__row factory__row--3">
+                        {rest.slice(6, 9).map((item, i) => (
+                            <motion.div
+                                key={item.title}
+                                className="factory__card"
+                                initial={{ opacity: 0, y: 25 }}
+                                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                                transition={{ duration: 0.5, delay: 0.75 + i * 0.1 }}
+                                onClick={() => openLightbox(i + 7)}
+                            >
+                                <OptimizedImage src={item.src} placeholder={item.placeholder} alt={item.title} className="factory__card-img-wrapper" />
+                                <div className="factory__card-overlay">
+                                    <div className="factory__card-zoom"><LuZoomIn size={18} /></div>
+                                    <h4 className="factory__card-title">{item.title}</h4>
+                                    <p className="factory__card-desc">{item.description}</p>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+
+                    {/* Row 4: 2 stacked + 1 large */}
+                    <div className="factory__row factory__row--featured">
+                        <div className="factory__card-stack">
+                            {rest.slice(9, 11).map((item, i) => (
+                                <motion.div
+                                    key={item.title}
+                                    className="factory__card"
+                                    initial={{ opacity: 0, y: 25 }}
+                                    animate={isInView ? { opacity: 1, y: 0 } : {}}
+                                    transition={{ duration: 0.5, delay: 0.95 + i * 0.1 }}
+                                    onClick={() => openLightbox(i + 10)}
                                 >
                                     <OptimizedImage src={item.src} placeholder={item.placeholder} alt={item.title} className="factory__card-img-wrapper" />
                                     <div className="factory__card-overlay">
