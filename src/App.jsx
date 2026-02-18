@@ -17,7 +17,7 @@ const structuredData = {
   '@type': 'FurnitureStore',
   name: 'New Lucky Furniture Industries',
   description:
-    'Premium furniture manufacturer in Solapur, Maharashtra. Specializing in home furniture, office furniture, and customized solutions since 1995.',
+    'Premium furniture manufacturer in Solapur, Maharashtra. Specializing in home furniture, office furniture, and customized solutions since 2001.',
   url: 'https://newluckyfurniture.com',
   telephone: '+919876543210',
   address: {
@@ -41,7 +41,7 @@ const structuredData = {
       closes: '19:00',
     },
   ],
-  foundingDate: '1995',
+  foundingDate: '2001',
   priceRange: '₹₹',
   image: 'https://newluckyfurniture.com/logo.png',
   sameAs: [],
@@ -54,7 +54,7 @@ export default function App() {
         <title>New Lucky Furniture Industries | Premium Furniture Manufacturer in Solapur</title>
         <meta
           name="description"
-          content="New Lucky Furniture Industries — Solapur's trusted furniture manufacturer since 1995. Custom home & office furniture crafted with premium materials and expert craftsmanship. Get a free consultation today."
+          content="New Lucky Furniture Industries — Solapur's trusted furniture manufacturer since 2001. Custom home & office furniture crafted with premium materials and expert craftsmanship. Get a free consultation today."
         />
         <meta
           name="keywords"
@@ -65,7 +65,7 @@ export default function App() {
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="New Lucky Furniture Industries | Premium Furniture Since 1995" />
+        <meta property="og:title" content="New Lucky Furniture Industries | Premium Furniture Since 2001" />
         <meta
           property="og:description"
           content="Transform your space with bespoke furniture from Solapur's most trusted manufacturer. 25+ years of excellence."
@@ -79,7 +79,7 @@ export default function App() {
         <meta name="twitter:title" content="New Lucky Furniture Industries" />
         <meta
           name="twitter:description"
-          content="Premium furniture manufacturer in Solapur since 1995."
+          content="Premium furniture manufacturer in Solapur since 2001."
         />
 
         {/* Structured Data */}

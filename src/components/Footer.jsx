@@ -48,7 +48,7 @@ export default function Footer() {
                             <img src={logo} alt="New Lucky Furniture Industries" className="footer__logo-img" />
                         </div>
                         <p className="footer__about">
-                            Crafting premium furniture since 1995. We transform spaces with
+                            Crafting premium furniture since 2001. We transform spaces with
                             bespoke designs that combine artistry, durability, and functionality.
                         </p>
                         <div className="footer__social">

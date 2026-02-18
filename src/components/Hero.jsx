@@ -41,7 +41,7 @@ export default function Hero() {
                     transition={{ duration: 0.6, delay: 0.2 }}
                 >
                     <span className="hero__badge-dot" />
-                    Crafting Excellence Since 1995
+                    Crafting Excellence Since 2001
                 </motion.div>
 
                 <motion.h1

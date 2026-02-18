@@ -29,7 +29,7 @@ export default function About() {
                     <span className="section-subtitle">About Us</span>
                     <h2 className="section-title">A Legacy of Fine Craftsmanship</h2>
                     <p className="section-description">
-                        Since 1995, we&apos;ve been transforming spaces across Solapur and beyond
+                        Since 2001, we&apos;ve been transforming spaces across Solapur and beyond
                         with furniture that tells a story.
                     </p>
                 </motion.div>
