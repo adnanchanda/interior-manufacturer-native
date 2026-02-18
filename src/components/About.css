@@ -29,6 +29,11 @@
     display: block;
 }
 
+.about__story-photo.optimized-image-wrapper {
+    width: 100%;
+    aspect-ratio: 4/5;
+}
+
 .about__story-badge {
     position: absolute;
     bottom: -20px;

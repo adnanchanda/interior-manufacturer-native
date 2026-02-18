@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HiMenu, HiX } from 'react-icons/hi';
-import logo from '../assets/logo.png';
+import logo from '../assets/optimized/logo.webp';
 import './Header.css';
 
 const navLinks = [
@@ -18,6 +19,16 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeLink, setActiveLink] = useState('#home');
+
+  // Lock body scroll when mobile drawer is open
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [mobileOpen]);
 
   useEffect(() => {
     const onScroll = () => {
@@ -51,6 +62,7 @@ export default function Header() {
   };
 
   return (
+    <>
     <motion.header
       className={`header ${scrolled ? 'header--scrolled' : ''}`}
       initial={{ y: -100 }}
@@ -99,7 +111,10 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile Drawer */}
+    </motion.header>
+
+    {/* Mobile Drawer — portaled to body to avoid stacking context issues */}
+    {createPortal(
       <AnimatePresence>
         {mobileOpen && (
           <>
@@ -154,7 +169,9 @@ export default function Header() {
             </motion.div>
           </>
         )}
-      </AnimatePresence>
-    </motion.header>
+      </AnimatePresence>,
+      document.body
+    )}
+    </>
   );
 }

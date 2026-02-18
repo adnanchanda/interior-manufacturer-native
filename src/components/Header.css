@@ -7,6 +7,7 @@
     z-index: 1000;
     padding: 16px 0;
     transition: var(--transition-base);
+    overflow: hidden;
 }
 
 .header--scrolled {
@@ -22,13 +23,15 @@
     align-items: center;
     justify-content: space-between;
     gap: 24px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Logo */
 .header__logo {
     display: flex;
     align-items: center;
-    z-index: 1001;
+    z-index: 1;
     transition: all 0.3s ease;
 }
 
@@ -37,18 +40,20 @@
 }
 
 .header__logo-img {
-    height: 40px;
-    /* adjusted size */
+    height: 52px;
     width: auto;
     display: block;
-    border-radius: 20px;
-    /* pill effect */
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    object-fit: contain;
 }
 
 .header--scrolled .header__logo-img {
-    height: 36px;
-    border-color: rgba(0, 0, 0, 0.1);
+    height: 46px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Nav */
@@ -102,9 +107,11 @@
 .header__menu-btn {
     display: none;
     background: none;
+    border: none;
+    cursor: pointer;
     color: var(--white);
     padding: 8px;
-    z-index: 1001;
+    z-index: 1;
 }
 
 .header--scrolled .header__menu-btn {
@@ -116,7 +123,7 @@
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
+    z-index: 10000;
 }
 
 /* Drawer */
@@ -128,11 +135,12 @@
     width: 320px;
     max-width: 85vw;
     background: var(--white);
-    z-index: 1000;
+    z-index: 10001;
     padding: 24px;
     display: flex;
     flex-direction: column;
     box-shadow: var(--shadow-xl);
+    overflow-y: auto;
 }
 
 .header__drawer-header {
@@ -209,7 +217,15 @@
         background: rgba(255, 255, 255, 0.97);
     }
 
+    .header__container {
+        gap: 0;
+    }
+
     /* Logo always visible on mobile */
+    .header__logo {
+        flex-shrink: 0;
+    }
+
     .header__logo-name {
         color: var(--white);
         font-size: 1rem;
@@ -243,6 +259,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-shrink: 0;
         width: 42px;
         height: 42px;
         border-radius: var(--radius-sm);

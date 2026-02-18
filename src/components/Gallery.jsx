@@ -1,76 +1,90 @@
 import { useState, useRef } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { LuX, LuChevronLeft, LuChevronRight } from 'react-icons/lu';
+import OptimizedImage from './OptimizedImage';
 import './Gallery.css';
 
-// Living Room
-import living1 from '../assets/living_1.jpg';
-import living2 from '../assets/living_2.jpg';
+// Optimized WebP images
+import living1 from '../assets/optimized/living_1.webp';
+import living2 from '../assets/optimized/living_2.webp';
+import bedroom1 from '../assets/optimized/bedroom_1.webp';
+import bedroom2 from '../assets/optimized/bedroom_2.webp';
+import bedroom3 from '../assets/optimized/bedroom_3.webp';
+import dining1 from '../assets/optimized/dining_1.webp';
+import dining2 from '../assets/optimized/dining_2.webp';
+import dining3 from '../assets/optimized/dining_3.webp';
+import dining4 from '../assets/optimized/dining_4.webp';
+import office1 from '../assets/optimized/office_1.webp';
+import office2 from '../assets/optimized/office_2.webp';
+import office3 from '../assets/optimized/office_3.webp';
+import office4 from '../assets/optimized/office_4.webp';
+import office5 from '../assets/optimized/office_5.webp';
+import office6 from '../assets/optimized/office_6.webp';
+import school1 from '../assets/optimized/school_1.webp';
+import school2 from '../assets/optimized/school_2.webp';
+import school3 from '../assets/optimized/school_3.webp';
+import hotel1 from '../assets/optimized/hotel_1.webp';
+import hotel2 from '../assets/optimized/hotel_2.webp';
+import hotel3 from '../assets/optimized/hotel_3.webp';
 
-// Bedroom
-import bedroom1 from '../assets/bedroom_1.jpg';
-import bedroom2 from '../assets/bedroom_2.jpg';
-import bedroom3 from '../assets/bedroom_3.jpg';
-
-// Dining
-import dining1 from '../assets/dining_1.jpg';
-import dining2 from '../assets/dining_2.jpg';
-import dining3 from '../assets/dining_3.jpg';
-import dining4 from '../assets/dining_4.jpg';
-
-// Office
-import office1 from '../assets/office_1.jpg';
-import office2 from '../assets/office_2.jpg';
-import office3 from '../assets/office_3.jpg';
-import office4 from '../assets/office_4.jpg';
-import office5 from '../assets/office_5.jpg';
-import office6 from '../assets/office_6.jpg';
-
-// School
-import school1 from '../assets/school_1.jpg';
-import school2 from '../assets/school_2.jpg';
-import school3 from '../assets/school_3.jpg';
-
-// Hotel
-import hotel1 from '../assets/hotel_1.jpg';
-import hotel2 from '../assets/hotel_2.jpg';
-import hotel3 from '../assets/hotel_3.jpg';
+// Blur placeholders
+import living1Ph from '../assets/placeholders/living_1_placeholder.webp';
+import living2Ph from '../assets/placeholders/living_2_placeholder.webp';
+import bedroom1Ph from '../assets/placeholders/bedroom_1_placeholder.webp';
+import bedroom2Ph from '../assets/placeholders/bedroom_2_placeholder.webp';
+import bedroom3Ph from '../assets/placeholders/bedroom_3_placeholder.webp';
+import dining1Ph from '../assets/placeholders/dining_1_placeholder.webp';
+import dining2Ph from '../assets/placeholders/dining_2_placeholder.webp';
+import dining3Ph from '../assets/placeholders/dining_3_placeholder.webp';
+import dining4Ph from '../assets/placeholders/dining_4_placeholder.webp';
+import office1Ph from '../assets/placeholders/office_1_placeholder.webp';
+import office2Ph from '../assets/placeholders/office_2_placeholder.webp';
+import office3Ph from '../assets/placeholders/office_3_placeholder.webp';
+import office4Ph from '../assets/placeholders/office_4_placeholder.webp';
+import office5Ph from '../assets/placeholders/office_5_placeholder.webp';
+import office6Ph from '../assets/placeholders/office_6_placeholder.webp';
+import school1Ph from '../assets/placeholders/school_1_placeholder.webp';
+import school2Ph from '../assets/placeholders/school_2_placeholder.webp';
+import school3Ph from '../assets/placeholders/school_3_placeholder.webp';
+import hotel1Ph from '../assets/placeholders/hotel_1_placeholder.webp';
+import hotel2Ph from '../assets/placeholders/hotel_2_placeholder.webp';
+import hotel3Ph from '../assets/placeholders/hotel_3_placeholder.webp';
 
 const categories = ['All', 'Living Room', 'Bedroom', 'Dining', 'Office', 'School', 'Hotel'];
 
 const galleryItems = [
     // Living Room
-    { id: 1, category: 'Living Room', title: 'Modern Living Room Setup', src: living1 },
-    { id: 2, category: 'Living Room', title: 'Contemporary Living Space', src: living2 },
+    { id: 1, category: 'Living Room', title: 'Modern Living Room Setup', src: living1, placeholder: living1Ph },
+    { id: 2, category: 'Living Room', title: 'Contemporary Living Space', src: living2, placeholder: living2Ph },
 
     // Bedroom
-    { id: 3, category: 'Bedroom', title: 'Elegant Bedroom Suite', src: bedroom1 },
-    { id: 4, category: 'Bedroom', title: 'Luxurious Bedroom Design', src: bedroom2 },
-    { id: 5, category: 'Bedroom', title: 'Cozy Bedroom Interior', src: bedroom3 },
+    { id: 3, category: 'Bedroom', title: 'Elegant Bedroom Suite', src: bedroom1, placeholder: bedroom1Ph },
+    { id: 4, category: 'Bedroom', title: 'Luxurious Bedroom Design', src: bedroom2, placeholder: bedroom2Ph },
+    { id: 5, category: 'Bedroom', title: 'Cozy Bedroom Interior', src: bedroom3, placeholder: bedroom3Ph },
 
     // Dining
-    { id: 6, category: 'Dining', title: 'Premium Dining Set', src: dining1 },
-    { id: 7, category: 'Dining', title: 'Classic Dining Room', src: dining2 },
-    { id: 8, category: 'Dining', title: 'Designer Dining Table', src: dining3 },
-    { id: 9, category: 'Dining', title: 'Modern Dining Space', src: dining4 },
+    { id: 6, category: 'Dining', title: 'Premium Dining Set', src: dining1, placeholder: dining1Ph },
+    { id: 7, category: 'Dining', title: 'Classic Dining Room', src: dining2, placeholder: dining2Ph },
+    { id: 8, category: 'Dining', title: 'Designer Dining Table', src: dining3, placeholder: dining3Ph },
+    { id: 9, category: 'Dining', title: 'Modern Dining Space', src: dining4, placeholder: dining4Ph },
 
     // Office
-    { id: 10, category: 'Office', title: 'Professional Office Setup', src: office1 },
-    { id: 11, category: 'Office', title: 'Executive Workspace', src: office2 },
-    { id: 12, category: 'Office', title: 'Modern Conference Room', src: office3 },
-    { id: 13, category: 'Office', title: 'Ergonomic Office Design', src: office4 },
-    { id: 14, category: 'Office', title: 'Corporate Office Interior', src: office5 },
-    { id: 15, category: 'Office', title: 'Compact Office Solution', src: office6 },
+    { id: 10, category: 'Office', title: 'Professional Office Setup', src: office1, placeholder: office1Ph },
+    { id: 11, category: 'Office', title: 'Executive Workspace', src: office2, placeholder: office2Ph },
+    { id: 12, category: 'Office', title: 'Modern Conference Room', src: office3, placeholder: office3Ph },
+    { id: 13, category: 'Office', title: 'Ergonomic Office Design', src: office4, placeholder: office4Ph },
+    { id: 14, category: 'Office', title: 'Corporate Office Interior', src: office5, placeholder: office5Ph },
+    { id: 15, category: 'Office', title: 'Compact Office Solution', src: office6, placeholder: office6Ph },
 
     // School
-    { id: 16, category: 'School', title: 'Classroom Furniture', src: school1 },
-    { id: 17, category: 'School', title: 'Student Desk & Chairs', src: school2 },
-    { id: 18, category: 'School', title: 'School Interior Setup', src: school3 },
+    { id: 16, category: 'School', title: 'Classroom Furniture', src: school1, placeholder: school1Ph },
+    { id: 17, category: 'School', title: 'Student Desk & Chairs', src: school2, placeholder: school2Ph },
+    { id: 18, category: 'School', title: 'School Interior Setup', src: school3, placeholder: school3Ph },
 
     // Hotel
-    { id: 19, category: 'Hotel', title: 'Premium Hotel Lounge', src: hotel1 },
-    { id: 20, category: 'Hotel', title: 'Luxury Hotel Suite', src: hotel2 },
-    { id: 21, category: 'Hotel', title: 'Hotel Room Furniture', src: hotel3 },
+    { id: 19, category: 'Hotel', title: 'Premium Hotel Lounge', src: hotel1, placeholder: hotel1Ph },
+    { id: 20, category: 'Hotel', title: 'Luxury Hotel Suite', src: hotel2, placeholder: hotel2Ph },
+    { id: 21, category: 'Hotel', title: 'Hotel Room Furniture', src: hotel3, placeholder: hotel3Ph },
 ];
 
 export default function Gallery() {
@@ -147,10 +161,10 @@ export default function Gallery() {
                                 onClick={() => openLightbox(i)}
                             >
                                 <div className="gallery__card-image">
-                                    <img
+                                    <OptimizedImage
                                         src={item.src}
+                                        placeholder={item.placeholder}
                                         alt={item.title}
-                                        loading="lazy"
                                     />
                                     <div className="gallery__card-overlay">
                                         <span className="gallery__card-category">{item.category}</span>

@@ -1,7 +1,9 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { LuAward, LuUsers, LuHouse, LuCalendar } from 'react-icons/lu';
-import factoryExterior from '../assets/1CDFBCB6-9920-4079-95F0-10738991D3A4.PNG';
+import OptimizedImage from './OptimizedImage';
+import factoryExterior from '../assets/optimized/1CDFBCB6-9920-4079-95F0-10738991D3A4.webp';
+import factoryExteriorPh from '../assets/placeholders/1CDFBCB6-9920-4079-95F0-10738991D3A4_placeholder.webp';
 import './About.css';
 
 const stats = [
@@ -41,8 +43,9 @@ export default function About() {
                     >
                         <div className="about__story-image">
                             <div className="about__story-image-inner">
-                                <img
+                                <OptimizedImage
                                     src={factoryExterior}
+                                    placeholder={factoryExteriorPh}
                                     alt="New Lucky Furniture Industries Factory"
                                     className="about__story-photo"
                                 />

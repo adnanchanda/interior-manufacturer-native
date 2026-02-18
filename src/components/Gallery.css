@@ -72,6 +72,11 @@
     overflow: hidden;
 }
 
+.gallery__card-image .optimized-image-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
 .gallery__card-image img {
     width: 100%;
     height: 100%;
@@ -79,7 +84,8 @@
     transition: transform 0.5s ease;
 }
 
-.gallery__card:hover .gallery__card-image img {
+.gallery__card:hover .gallery__card-image img,
+.gallery__card:hover .gallery__card-image .optimized-image-wrapper {
     transform: scale(1.08);
 }
 

@@ -8,7 +8,7 @@ import {
     LuInstagram,
     LuTwitter,
 } from 'react-icons/lu';
-import logo from '../assets/logo.png';
+import logo from '../assets/optimized/logo.webp';
 import './Footer.css';
 
 const quickLinks = [

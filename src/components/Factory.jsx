@@ -1,49 +1,67 @@
 import { useState, useRef } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { LuX, LuChevronLeft, LuChevronRight, LuFactory, LuUsers, LuWrench, LuZoomIn } from 'react-icons/lu';
+import OptimizedImage from './OptimizedImage';
 import './Factory.css';
 
-import factoryExterior from '../assets/1CDFBCB6-9920-4079-95F0-10738991D3A4.PNG';
-import craftsmen from '../assets/3DFC2125-956E-4C18-9F0F-DD9D4FFFE5C6.PNG';
-import workshopFloor from '../assets/3FE6B5C9-F5EA-458B-86CA-42769B8AA71F.PNG';
-import drillingMachine from '../assets/6023430E-330D-4460-BE22-6490CBD8CD55.PNG';
-import productionArea from '../assets/IMG_2236.JPG.jpeg';
-import aerialView from '../assets/IMG_2992.jpg.jpeg';
-import holzmaMachine from '../assets/18ED5C3F-CC10-49B6-B53B-1F0D2324E558.PNG';
+// Optimized WebP images
+import factoryExterior from '../assets/optimized/1CDFBCB6-9920-4079-95F0-10738991D3A4.webp';
+import craftsmen from '../assets/optimized/3DFC2125-956E-4C18-9F0F-DD9D4FFFE5C6.webp';
+import workshopFloor from '../assets/optimized/3FE6B5C9-F5EA-458B-86CA-42769B8AA71F.webp';
+import drillingMachine from '../assets/optimized/6023430E-330D-4460-BE22-6490CBD8CD55.webp';
+import productionArea from '../assets/optimized/IMG_2236.JPG.webp';
+import aerialView from '../assets/optimized/IMG_2992.jpg.webp';
+import holzmaMachine from '../assets/optimized/18ED5C3F-CC10-49B6-B53B-1F0D2324E558.webp';
+
+// Blur placeholders
+import factoryExteriorPh from '../assets/placeholders/1CDFBCB6-9920-4079-95F0-10738991D3A4_placeholder.webp';
+import craftsmenPh from '../assets/placeholders/3DFC2125-956E-4C18-9F0F-DD9D4FFFE5C6_placeholder.webp';
+import workshopFloorPh from '../assets/placeholders/3FE6B5C9-F5EA-458B-86CA-42769B8AA71F_placeholder.webp';
+import drillingMachinePh from '../assets/placeholders/6023430E-330D-4460-BE22-6490CBD8CD55_placeholder.webp';
+import productionAreaPh from '../assets/placeholders/IMG_2236.JPG_placeholder.webp';
+import aerialViewPh from '../assets/placeholders/IMG_2992.jpg_placeholder.webp';
+import holzmaMachinePh from '../assets/placeholders/18ED5C3F-CC10-49B6-B53B-1F0D2324E558_placeholder.webp';
 
 const factoryImages = [
     {
         src: factoryExterior,
+        placeholder: factoryExteriorPh,
         title: 'Our Factory',
         description: 'The NLFI manufacturing facility in Solapur',
     },
     {
         src: craftsmen,
+        placeholder: craftsmenPh,
         title: 'Expert Craftsmen',
         description: 'Skilled artisans working with precision cutting equipment',
     },
     {
         src: holzmaMachine,
+        placeholder: holzmaMachinePh,
         title: 'CNC Panel Saw',
         description: 'Holzma CNC panel saw for precision board cutting',
     },
     {
         src: workshopFloor,
+        placeholder: workshopFloorPh,
         title: 'Production Floor',
         description: 'Our team at work on the spacious workshop floor',
     },
     {
         src: drillingMachine,
+        placeholder: drillingMachinePh,
         title: 'Precision Equipment',
         description: 'Holytek industrial drilling machine for accurate woodwork',
     },
     {
         src: productionArea,
+        placeholder: productionAreaPh,
         title: 'Manufacturing Bay',
         description: 'Doors and panels in various stages of production',
     },
     {
         src: aerialView,
+        placeholder: aerialViewPh,
         title: 'Factory Overview',
         description: 'Aerial view of our facility with dust collection system',
     },
@@ -114,7 +132,12 @@ export default function Factory() {
                     transition={{ duration: 0.6, delay: 0.15 }}
                     onClick={() => openLightbox(0)}
                 >
-                    <img src={hero.src} alt={hero.title} className="factory__hero-img" />
+                    <OptimizedImage
+                        src={hero.src}
+                        placeholder={hero.placeholder}
+                        alt={hero.title}
+                        className="factory__hero-img-wrapper"
+                    />
                     <div className="factory__hero-overlay">
                         <div className="factory__hero-text">
                             <h3 className="factory__hero-title">{hero.title}</h3>
@@ -139,7 +162,7 @@ export default function Factory() {
                                 transition={{ duration: 0.5, delay: 0.25 + i * 0.1 }}
                                 onClick={() => openLightbox(i + 1)}
                             >
-                                <img src={item.src} alt={item.title} className="factory__card-img" loading="lazy" />
+                                <OptimizedImage src={item.src} placeholder={item.placeholder} alt={item.title} className="factory__card-img-wrapper" />
                                 <div className="factory__card-overlay">
                                     <div className="factory__card-zoom"><LuZoomIn size={18} /></div>
                                     <h4 className="factory__card-title">{item.title}</h4>
@@ -158,7 +181,7 @@ export default function Factory() {
                             transition={{ duration: 0.5, delay: 0.55 }}
                             onClick={() => openLightbox(4)}
                         >
-                            <img src={rest[3].src} alt={rest[3].title} className="factory__card-img" loading="lazy" />
+                            <OptimizedImage src={rest[3].src} placeholder={rest[3].placeholder} alt={rest[3].title} className="factory__card-img-wrapper" />
                             <div className="factory__card-overlay">
                                 <div className="factory__card-zoom"><LuZoomIn size={18} /></div>
                                 <h4 className="factory__card-title">{rest[3].title}</h4>
@@ -176,7 +199,7 @@ export default function Factory() {
                                     transition={{ duration: 0.5, delay: 0.65 + i * 0.1 }}
                                     onClick={() => openLightbox(i + 5)}
                                 >
-                                    <img src={item.src} alt={item.title} className="factory__card-img" loading="lazy" />
+                                    <OptimizedImage src={item.src} placeholder={item.placeholder} alt={item.title} className="factory__card-img-wrapper" />
                                     <div className="factory__card-overlay">
                                         <div className="factory__card-zoom"><LuZoomIn size={18} /></div>
                                         <h4 className="factory__card-title">{item.title}</h4>
