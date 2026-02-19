@@ -52,8 +52,8 @@ export default function Clients() {
                                 <img
                                     src={client.src}
                                     alt={client.alt}
-                                    width="150"
-                                    height="100"
+                                    width="300"
+                                    height="200"
                                     loading="lazy"
                                     className="clients__logo"
                                 />
