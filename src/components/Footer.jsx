@@ -108,7 +108,7 @@ export default function Footer() {
                             </div>
                             <div className="footer__contact-item">
                                 <LuMail className="footer__contact-icon" />
-                                <span>info@newluckyfurniture.com</span>
+                                <span>newluckyfurnitureindustries@gmail.com</span>
                             </div>
                         </div>
                     </div>

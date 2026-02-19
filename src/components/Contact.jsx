@@ -26,7 +26,7 @@ const contactInfo = [
         icon: LuMail,
         title: 'Email Us',
         details: [
-            { label: '', value: 'info@newluckyfurniture.com' },
+            { label: '', value: 'newluckyfurnitureindustries@gmail.com' },
         ],
     },
     {

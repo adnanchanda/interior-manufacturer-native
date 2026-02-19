@@ -6,17 +6,17 @@ const founders = [
     {
         name: 'Khalid Shaikh',
         role: 'Founder & CEO',
-        bio: 'With over 30 years of experience in furniture craftsmanship, Mohammed founded New Lucky Furniture Industries with a vision to bring quality and durability to every home. His deep knowledge of materials and traditional techniques forms the backbone of our company.',
+        bio: 'With over 30 years of experience in furniture craftsmanship, Khalid Shaikh founded New Lucky Furniture Industries with a vision to bring quality and durability to every home. His deep knowledge of materials and traditional techniques forms the backbone of our company.',
     },
     {
         name: 'Usama Shaikh',
         role: 'Managing Director',
-        bio: 'Bringing modern design sensibilities and operational excellence, Adnan leads the company\u2019s expansion and innovation. He ensures that New Lucky stays ahead of trends while maintaining the core values of integrity and customer satisfaction.',
+        bio: 'Bringing modern design sensibilities and operational excellence, Usama leads the company\u2019s expansion and innovation. He ensures that New Lucky stays ahead of trends while maintaining the core values of integrity and customer satisfaction.',
     },
     {
         name: 'Junaid Shaikh',
         role: 'Managing Director',
-        bio: 'Ar.Junaid Shaikh (B.Arch) represents the new generation of leadership at New Lucky Furniture Industries. With fresh ideas, a passion for modern design, and a keen eye for emerging trends, he is driving the company into the future — blending innovation with the timeless craftsmanship that defines NLFI.',
+        bio: 'AR.Junaid Shaikh (B.ARCH) represents the new generation of leadership at New Lucky Furniture Industries. With fresh ideas, a passion for modern design, and a keen eye for emerging trends, he is driving the company into the future — blending innovation with the timeless craftsmanship that defines NLFI.',
     },
 ];
 
