@@ -4,9 +4,7 @@ import {
     LuMail,
     LuMapPin,
     LuArrowUp,
-    LuFacebook,
     LuInstagram,
-    LuTwitter,
 } from 'react-icons/lu';
 import logo from '../assets/optimized/logo.webp';
 import './Footer.css';
@@ -52,14 +50,14 @@ export default function Footer() {
                             bespoke designs that combine artistry, durability, and functionality.
                         </p>
                         <div className="footer__social">
-                            <a href="#" className="footer__social-link" aria-label="Facebook">
-                                <LuFacebook size={18} />
-                            </a>
-                            <a href="#" className="footer__social-link" aria-label="Instagram">
+                            <a
+                                href="https://www.instagram.com/nlfi_solapur?igsh=b2ZuNW9qeXVjbjVv"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="footer__social-link"
+                                aria-label="Instagram"
+                            >
                                 <LuInstagram size={18} />
-                            </a>
-                            <a href="#" className="footer__social-link" aria-label="Twitter">
-                                <LuTwitter size={18} />
                             </a>
                         </div>
                     </div>
