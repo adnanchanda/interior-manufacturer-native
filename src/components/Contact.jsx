@@ -17,8 +17,9 @@ const contactInfo = [
         icon: LuPhone,
         title: 'Call Us',
         details: [
-            { label: 'Owner', value: '+91 98765 43210' },
-            { label: 'Managing Director', value: '+91 98765 43211' },
+            { label: 'Owner', value: '+91 9881786800' },
+            { label: 'Managing Director (Junaid)', value: '+91 8482993385' },
+            { label: 'Managing Director (Usama)', value: '+91 9527580042' },
         ],
     },
     {

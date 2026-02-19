@@ -103,8 +103,9 @@ export default function Footer() {
                             <div className="footer__contact-item">
                                 <LuPhone className="footer__contact-icon" />
                                 <div>
-                                    <span>Owner: +91 98765 43210</span><br />
-                                    <span>MD: +91 98765 43211</span>
+                                    <span>Owner: +91 9881726800</span><br />
+                                    <span>MD (Junaid): +91 8482993385</span><br />
+                                    <span>MD (Usama): +91 9527580042</span>
                                 </div>
                             </div>
                             <div className="footer__contact-item">

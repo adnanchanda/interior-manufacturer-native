@@ -1,0 +1,56 @@
+.clients {
+    background-color: var(--white);
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.clients__carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+    /* Add gradient masks for smooth fade edges */
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.clients__track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    gap: 60px;
+}
+
+.clients__item {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100px;
+    /* Grayscale filter for a uniform look, colored on hover */
+    filter: grayscale(100%) opacity(0.7);
+    transition: var(--transition-base);
+}
+
+.clients__item:hover {
+    filter: grayscale(0%) opacity(1);
+    transform: scale(1.05);
+}
+
+.clients__logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .clients__track {
+        gap: 40px;
+    }
+
+    .clients__item {
+        width: 120px;
+        height: 80px;
+    }
+}

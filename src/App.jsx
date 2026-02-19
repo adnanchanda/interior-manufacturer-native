@@ -11,6 +11,7 @@ import Gallery from './components/Gallery';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Clients from './components/Clients';
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -96,6 +97,7 @@ export default function App() {
         <Factory />
         <Gallery />
         <Testimonials />
+        <Clients />
         <Contact />
       </main>
       <Footer />

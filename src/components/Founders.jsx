@@ -16,7 +16,7 @@ const founders = [
     {
         name: 'Junaid Shaikh',
         role: 'Managing Director',
-        bio: 'Junaid represents the new generation of leadership at New Lucky Furniture Industries. With fresh ideas, a passion for modern design, and a keen eye for emerging trends, he is driving the company into the future — blending innovation with the timeless craftsmanship that defines NLFI.',
+        bio: 'Ar.Junaid Shaikh (B.Arch) represents the new generation of leadership at New Lucky Furniture Industries. With fresh ideas, a passion for modern design, and a keen eye for emerging trends, he is driving the company into the future — blending innovation with the timeless craftsmanship that defines NLFI.',
     },
 ];
 
