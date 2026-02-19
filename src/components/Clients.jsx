@@ -53,7 +53,7 @@ export default function Clients() {
                                     src={client.src}
                                     alt={client.alt}
                                     width="300"
-                                    height="200"
+                                    height="180"
                                     loading="lazy"
                                     className="clients__logo"
                                 />
