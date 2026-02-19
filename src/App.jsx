@@ -23,10 +23,10 @@ const structuredData = {
   telephone: '+919876543210',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Industrial Area',
+    streetAddress: '255, Ravivar Peth',
     addressLocality: 'Solapur',
     addressRegion: 'Maharashtra',
-    postalCode: '413001',
+    postalCode: '413002',
     addressCountry: 'IN',
   },
   geo: {

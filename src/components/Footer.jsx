@@ -96,7 +96,7 @@ export default function Footer() {
                         <div className="footer__contact-list">
                             <div className="footer__contact-item">
                                 <LuMapPin className="footer__contact-icon" />
-                                <span>Industrial Area, Solapur,<br />Maharashtra 413001</span>
+                                <span>255, Ravivar Peth, Solapur,<br />Maharashtra 413002, India</span>
                             </div>
                             <div className="footer__contact-item">
                                 <LuPhone className="footer__contact-icon" />

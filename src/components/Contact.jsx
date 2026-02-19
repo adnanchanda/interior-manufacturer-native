@@ -33,7 +33,7 @@ const contactInfo = [
         icon: LuMapPin,
         title: 'Visit Us',
         details: [
-            { label: '', value: 'New Lucky Furniture Industries, Industrial Area, Solapur, Maharashtra 413001' },
+            { label: '', value: 'New Lucky Furniture Industries, 255, Ravivar Peth, Solapur, Maharashtra 413002, India' },
         ],
     },
     {
