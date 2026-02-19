@@ -67,12 +67,19 @@ export default function Contact() {
         setStatus('sending');
 
         try {
-            // Replace with your EmailJS credentials
+            // Send enquiry notification to owner
             await emailjs.sendForm(
-                'YOUR_SERVICE_ID',
-                'YOUR_TEMPLATE_ID',
+                'service_ce8xw0g',
+                'template_fgizpo8',
                 formRef.current,
-                'YOUR_PUBLIC_KEY'
+                'VHEg-W7_eRxFdhnIo'
+            );
+            // Send auto-reply confirmation to customer
+            await emailjs.sendForm(
+                'service_ce8xw0g',
+                'template_kb2wtgr',
+                formRef.current,
+                'VHEg-W7_eRxFdhnIo'
             );
             setStatus('sent');
             setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
