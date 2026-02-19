@@ -6,7 +6,7 @@ import {
     LuArrowUp,
     LuInstagram,
 } from 'react-icons/lu';
-import logo from '../assets/optimized/logo.webp';
+import logo from '../assets/logo.png';
 import './Footer.css';
 
 const quickLinks = [
