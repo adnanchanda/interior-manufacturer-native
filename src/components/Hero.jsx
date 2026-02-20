@@ -60,7 +60,7 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
                 >
-                    Solapur&apos;s trusted furniture manufacturer for over 30 years.
+                    Solapur&apos;s trusted furniture manufacturer for over 25 years.
                     We design and craft bespoke home &amp; office furniture
                     that combines artistry with functionality.
                 </motion.p>
