@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { HiArrowRight, HiPhone } from 'react-icons/hi';
+import { FaInstagram } from 'react-icons/fa';
 import './Hero.css';
 
 export default function Hero() {
@@ -85,6 +86,27 @@ export default function Hero() {
                         <HiPhone /> Call Us Now
                     </a>
                 </motion.div>
+
+                <motion.a
+                    href="https://www.instagram.com/nlfi_solapur?igsh=b2ZuNW9qeXVjbjVv"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hero__instagram"
+                    aria-label="Follow us on Instagram"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6, delay: 0.9 }}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                >
+                    <span className="hero__instagram-icon">
+                        <FaInstagram />
+                    </span>
+                    <span className="hero__instagram-text">
+                        Follow us on Instagram
+                    </span>
+                    <span className="hero__instagram-handle">@nlfi_solapur</span>
+                </motion.a>
 
                 <motion.div
                     className="hero__stats"
